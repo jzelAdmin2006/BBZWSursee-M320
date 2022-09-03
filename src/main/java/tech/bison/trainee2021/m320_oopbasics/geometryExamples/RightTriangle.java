@@ -5,7 +5,7 @@ public class RightTriangle {
   private double adjacent;
   private double oppositeSide;
 
-  public RightTriangle(int adjacent, int oppositeSide) {
+  public RightTriangle(double adjacent, double oppositeSide) {
     this.adjacent = adjacent;
     this.oppositeSide = oppositeSide;
   }
