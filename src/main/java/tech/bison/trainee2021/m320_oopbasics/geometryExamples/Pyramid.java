@@ -1,4 +1,4 @@
-package tech.bison.trainee2021.geometryExamples;
+package tech.bison.trainee2021.m320_oopbasics.geometryExamples;
 
 public class Pyramid {
 
