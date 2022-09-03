@@ -21,4 +21,8 @@ public class IsoscelesTriangle {
   public double getArea() {
     return base * height / 2;
   }
+
+  public double getThigh() {
+    return new RightTriangle(base / 2, height).getHypotenuse();
+  }
 }

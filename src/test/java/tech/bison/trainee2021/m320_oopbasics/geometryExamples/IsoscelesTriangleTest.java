@@ -58,4 +58,22 @@ public class IsoscelesTriangleTest {
 
     assertThat(area).isEqualTo(2);
   }
+
+  @Test
+  void newIsoscelesTriangleWithBaseHeightOne_getThigh_isSquareRootOfOnePointTwoFive() {
+    IsoscelesTriangle isoscelesTriangle = new IsoscelesTriangle(1, 1);
+
+    double thigh = isoscelesTriangle.getThigh();
+
+    assertThat(thigh).isEqualTo(Math.sqrt(1.25));
+  }
+
+  @Test
+  void newIsoscelesTriangleWithBaseHeightTwo_getThigh_isSquareRootOfThree() {
+    IsoscelesTriangle isoscelesTriangle = new IsoscelesTriangle(2, 2);
+
+    double thigh = isoscelesTriangle.getThigh();
+
+    assertThat(thigh).isEqualTo(Math.sqrt(5));
+  }
 }
