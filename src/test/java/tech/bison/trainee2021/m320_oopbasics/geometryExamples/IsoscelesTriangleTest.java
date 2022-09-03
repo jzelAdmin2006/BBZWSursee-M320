@@ -51,7 +51,7 @@ public class IsoscelesTriangleTest {
   }
 
   @Test
-  void newRightTriangleWithAdjacentOppositeSideTwo_getArea_isTwo() {
+  void newIsoscelesTriangleWithBaseHeightTwo_getArea_isTwo() {
     IsoscelesTriangle isoscelesTriangle = new IsoscelesTriangle(2, 2);
 
     double area = isoscelesTriangle.getArea();
