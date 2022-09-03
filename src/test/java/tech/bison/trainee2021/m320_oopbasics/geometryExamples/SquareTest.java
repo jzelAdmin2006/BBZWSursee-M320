@@ -59,4 +59,22 @@ public class SquareTest {
 
     assertThat(diagonal).isEqualTo(Math.sqrt(8));
   }
+
+  @Test
+  void squareWithSideLengthOne_getScope_isFour() {
+    Square square = new Square(1);
+
+    double scope = square.getScope();
+
+    assertThat(scope).isEqualTo(4);
+  }
+
+  @Test
+  void squareWithSideLengthTwo_getScope_isEight() {
+    Square square = new Square(2);
+
+    double scope = square.getScope();
+
+    assertThat(scope).isEqualTo(8);
+  }
 }

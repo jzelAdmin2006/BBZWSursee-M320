@@ -19,4 +19,8 @@ public class Square {
   public double getDiagonal() {
     return new RightTriangle(sideLength, sideLength).getHypotenuse();
   }
+
+  public double getScope() {
+    return 4 * sideLength;
+  }
 }
