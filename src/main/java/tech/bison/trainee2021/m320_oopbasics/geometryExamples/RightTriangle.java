@@ -21,4 +21,8 @@ public class RightTriangle {
   public double getHypotenuse() {
     return Math.sqrt(new Square(adjacent).getArea() + new Square(oppositeSide).getArea());
   }
+
+  public double getArea() {
+    return adjacent * oppositeSide / 2;
+  }
 }

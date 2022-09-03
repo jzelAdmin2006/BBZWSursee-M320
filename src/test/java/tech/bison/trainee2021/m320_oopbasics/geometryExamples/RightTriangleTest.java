@@ -58,4 +58,22 @@ public class RightTriangleTest {
 
     assertThat(hypotenuse).isEqualTo(5);
   }
+
+  @Test
+  void newRightTriangleWithAdjacentOppositeSideOne_getArea_isOneHalf() {
+    RightTriangle rightTriangle = new RightTriangle(1, 1);
+
+    double area = rightTriangle.getArea();
+
+    assertThat(area).isEqualTo(0.5);
+  }
+
+  @Test
+  void newRightTriangleWithAdjacentOppositeSideTwo_getArea_isTwo() {
+    RightTriangle rightTriangle = new RightTriangle(2, 2);
+
+    double area = rightTriangle.getArea();
+
+    assertThat(area).isEqualTo(2);
+  }
 }
