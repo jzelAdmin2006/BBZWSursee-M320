@@ -32,4 +32,8 @@ public class Pyramid {
     RightTriangle sideEdgeHypotenuseTriangle = new RightTriangle(baseDiagonal / 2, height);
     return sideEdgeHypotenuseTriangle.getHypotenuse();
   }
+
+  public double getVolume() {
+    return getBase().getArea() * height / 3;
+  }
 }

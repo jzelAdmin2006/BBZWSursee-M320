@@ -96,4 +96,22 @@ public class PyramidTest {
 
     assertThat(sideEdge).isEqualTo(Math.sqrt(4.5));
   }
+
+  @Test
+  void pyramidWithSideLengthHeightOne_getVolume_isOneThird() {
+    Pyramid pyramid = new Pyramid(1, 1);
+
+    double volume = pyramid.getVolume();
+
+    assertThat(volume).isEqualTo(1.0 / 3.0);
+  }
+
+  @Test
+  void pyramidWithSideLengthHeightTwo_getVolume_isEightThirds() {
+    Pyramid pyramid = new Pyramid(2, 2);
+
+    double volume = pyramid.getVolume();
+
+    assertThat(volume).isEqualTo(8.0 / 3.0);
+  }
 }
