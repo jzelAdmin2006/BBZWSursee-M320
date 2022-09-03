@@ -6,6 +6,6 @@ public class ExampleTest {
   @Test
   void printExampleMessage() {
     Example example = new Example();
-    System.out.println(example.getMessage());
+    System.out.println(example.getMessage("jzelAdmin"));
   }
 }
