@@ -33,11 +33,29 @@ public class PyramidTest {
   }
 
   @Test
-  void newPyramidWithHeightOne_getHeight_isTwo() {
+  void newPyramidWithHeightTwo_getHeight_isTwo() {
     Pyramid pyramid = new Pyramid(1, 2);
 
     double height = pyramid.getHeight();
 
     assertThat(height).isEqualTo(2);
+  }
+
+  @Test
+  void pyramidWithSideLengthOne_getBase_areaIsOne() {
+    Pyramid pyramid = new Pyramid(1, 1);
+
+    Square base = pyramid.getBase();
+
+    assertThat(base.getArea()).isEqualTo(1);
+  }
+
+  @Test
+  void pyramidWithSideLengthTwo_getBase_areaIsFour() {
+    Pyramid pyramid = new Pyramid(2, 1);
+
+    Square base = pyramid.getBase();
+
+    assertThat(base.getArea()).isEqualTo(4);
   }
 }

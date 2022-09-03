@@ -5,7 +5,7 @@ public class Pyramid {
   private double sideLength;
   private double height;
 
-  public Pyramid(int sideLength, int height) {
+  public Pyramid(double sideLength, double height) {
     this.sideLength = sideLength;
     this.height = height;
   }
@@ -16,5 +16,9 @@ public class Pyramid {
 
   public double getHeight() {
     return height;
+  }
+
+  public Square getBase() {
+    return new Square(sideLength);
   }
 }
