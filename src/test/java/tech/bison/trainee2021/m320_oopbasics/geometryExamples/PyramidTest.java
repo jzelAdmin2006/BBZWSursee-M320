@@ -114,4 +114,22 @@ public class PyramidTest {
 
     assertThat(volume).isEqualTo(8.0 / 3.0);
   }
+
+  @Test
+  void pyramidWithSideLengthHeightOne_getSurfaceArea_isCorrect() {
+    Pyramid pyramid = new Pyramid(1, 1);
+
+    double surfaceArea = pyramid.getSurfaceArea();
+
+    assertThat(surfaceArea).isEqualTo(Math.sqrt(1.25) * 2 + 1);
+  }
+
+  @Test
+  void pyramidWithSideLengthHeightTwo_getSurfaceArea_isCorrect() {
+    Pyramid pyramid = new Pyramid(2, 2);
+
+    double surfaceArea = pyramid.getSurfaceArea();
+
+    assertThat(surfaceArea).isEqualTo(Math.sqrt(5) * 4 + 4);
+  }
 }

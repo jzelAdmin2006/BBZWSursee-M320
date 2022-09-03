@@ -36,4 +36,8 @@ public class Pyramid {
   public double getVolume() {
     return getBase().getArea() * height / 3;
   }
+
+  public double getSurfaceArea() {
+    return getSideTriangle().getArea() * 4 + getBase().getArea();
+  }
 }
