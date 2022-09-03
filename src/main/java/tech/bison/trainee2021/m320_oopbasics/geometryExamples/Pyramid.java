@@ -21,4 +21,9 @@ public class Pyramid {
   public Square getBase() {
     return new Square(sideLength);
   }
+
+  public IsoscelesTriangle getSideTriangle() {
+    double height = new RightTriangle(sideLength, sideLength / 2).getHypotenuse();
+    return new IsoscelesTriangle(sideLength, height);
+  }
 }

@@ -42,20 +42,40 @@ public class PyramidTest {
   }
 
   @Test
-  void pyramidWithSideLengthOne_getBase_areaIsOne() {
+  void pyramidWithSideLengthOne_getBaseSquare_sideLengthIsOne() {
     Pyramid pyramid = new Pyramid(1, 1);
 
     Square base = pyramid.getBase();
 
-    assertThat(base.getArea()).isEqualTo(1);
+    assertThat(base.getSideLength()).isEqualTo(1);
   }
 
   @Test
-  void pyramidWithSideLengthTwo_getBase_areaIsFour() {
+  void pyramidWithSideLengthTwo_getBaseSquare_sideLengthIsTwo() {
     Pyramid pyramid = new Pyramid(2, 1);
 
     Square base = pyramid.getBase();
 
-    assertThat(base.getArea()).isEqualTo(4);
+    assertThat(base.getSideLength()).isEqualTo(2);
+  }
+
+  @Test
+  void pyramidWithSideLengthHeightOne_getSideTriangle_baseAndHeightAreCorrect() {
+    Pyramid pyramid = new Pyramid(1, 1);
+
+    IsoscelesTriangle sideTriangle = pyramid.getSideTriangle();
+
+    assertThat(sideTriangle.getBase()).isEqualTo(1);
+    assertThat(sideTriangle.getHeight()).isEqualTo(Math.sqrt(1.25));
+  }
+
+  @Test
+  void pyramidWithSideLengthHeightTwo_getSideTriangle_baseAndHeightAreCorrect() {
+    Pyramid pyramid = new Pyramid(2, 2);
+
+    IsoscelesTriangle sideTriangle = pyramid.getSideTriangle();
+
+    assertThat(sideTriangle.getBase()).isEqualTo(2);
+    assertThat(sideTriangle.getHeight()).isEqualTo(Math.sqrt(5));
   }
 }
