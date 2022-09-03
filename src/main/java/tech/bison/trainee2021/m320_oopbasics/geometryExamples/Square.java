@@ -4,8 +4,8 @@ public class Square {
 
   private double sideLength;
 
-  public Square(int sideLength) {
-    this.sideLength = sideLength;
+  public Square(double oppositeSide) {
+    this.sideLength = oppositeSide;
   }
 
   public double getSideLength() {
