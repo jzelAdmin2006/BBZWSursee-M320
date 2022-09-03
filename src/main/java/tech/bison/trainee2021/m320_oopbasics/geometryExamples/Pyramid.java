@@ -40,4 +40,8 @@ public class Pyramid {
   public double getSurfaceArea() {
     return getSideTriangle().getArea() * 4 + getBase().getArea();
   }
+
+  public double getTotalEdgeLength() {
+    return getBase().getScope() + getSideEdge() * 4;
+  }
 }

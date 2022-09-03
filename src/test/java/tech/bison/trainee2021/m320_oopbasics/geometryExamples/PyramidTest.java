@@ -132,4 +132,22 @@ public class PyramidTest {
 
     assertThat(surfaceArea).isEqualTo(Math.sqrt(5) * 4 + 4);
   }
+
+  @Test
+  void pyramidWithSideLengthHeightOne_getTotalEdgeLength_isCorrect() {
+    Pyramid pyramid = new Pyramid(1, 1);
+
+    double totalEdgeLength = pyramid.getTotalEdgeLength();
+
+    assertThat(totalEdgeLength).isEqualTo(4 + 4 * Math.sqrt(1.5));
+  }
+
+  @Test
+  void pyramidWithSideLengthOneHeightTwo_getTotalEdgeLength_isCorrect() {
+    Pyramid pyramid = new Pyramid(1, 2);
+
+    double totalEdgeLength = pyramid.getTotalEdgeLength();
+
+    assertThat(totalEdgeLength).isEqualTo(4 + 4 * Math.sqrt(4.5));
+  }
 }
