@@ -41,4 +41,22 @@ public class SquareTest {
 
     assertThat(area).isEqualTo(4);
   }
+
+  @Test
+  void squareWithSideLengthOne_getDiagonal_isSquareRootOfTwo() {
+    Square square = new Square(1);
+
+    double diagonal = square.getDiagonal();
+
+    assertThat(diagonal).isEqualTo(Math.sqrt(2));
+  }
+
+  @Test
+  void squareWithSideLengthTwo_getDiagonal_isSquareRootOfEight() {
+    Square square = new Square(2);
+
+    double diagonal = square.getDiagonal();
+
+    assertThat(diagonal).isEqualTo(Math.sqrt(8));
+  }
 }

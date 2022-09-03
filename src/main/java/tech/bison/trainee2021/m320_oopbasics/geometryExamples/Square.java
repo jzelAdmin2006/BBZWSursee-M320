@@ -15,4 +15,8 @@ public class Square {
   public double getArea() {
     return Math.pow(sideLength, 2);
   }
+
+  public double getDiagonal() {
+    return new RightTriangle(sideLength, sideLength).getHypotenuse();
+  }
 }
