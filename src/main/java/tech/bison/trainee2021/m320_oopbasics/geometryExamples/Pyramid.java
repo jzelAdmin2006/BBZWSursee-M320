@@ -26,4 +26,10 @@ public class Pyramid {
     double height = new RightTriangle(sideLength, sideLength / 2).getHypotenuse();
     return new IsoscelesTriangle(sideLength, height);
   }
+
+  public double getSideEdge() {
+    double baseDiagonal = getBase().getDiagonal();
+    RightTriangle sideEdgeHypotenuseTriangle = new RightTriangle(baseDiagonal / 2, height);
+    return sideEdgeHypotenuseTriangle.getHypotenuse();
+  }
 }

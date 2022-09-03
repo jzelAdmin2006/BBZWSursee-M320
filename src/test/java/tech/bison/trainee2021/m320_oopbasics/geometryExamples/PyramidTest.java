@@ -78,4 +78,22 @@ public class PyramidTest {
     assertThat(sideTriangle.getBase()).isEqualTo(2);
     assertThat(sideTriangle.getHeight()).isEqualTo(Math.sqrt(5));
   }
+
+  @Test
+  void pyramidWithSideLengthHeightOne_getSideEdge_isSquareRootOfOnePointFive() {
+    Pyramid pyramid = new Pyramid(1, 1);
+
+    double sideEdge = pyramid.getSideEdge();
+
+    assertThat(sideEdge).isEqualTo(Math.sqrt(1.5));
+  }
+
+  @Test
+  void pyramidWithSideLengthOneHeightTwo_getSideEdge_isSquareRootOfFourPointFive() {
+    Pyramid pyramid = new Pyramid(1, 2);
+
+    double sideEdge = pyramid.getSideEdge();
+
+    assertThat(sideEdge).isEqualTo(Math.sqrt(4.5));
+  }
 }
