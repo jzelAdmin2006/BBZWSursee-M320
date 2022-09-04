@@ -196,4 +196,24 @@ public class PyramidTest {
 
     assertThat(Math.round(lateralSlope)).isEqualTo(45);
   }
+
+  @Test
+  void pyramidWithSideLengthHeightOne_getSideEdgeTilt_isCorrect() {
+    Pyramid pyramid = new Pyramid(1, 1);
+
+    double sideEdgeTilt = pyramid.getSideEdgeTilt();
+
+    assertThat(Math.round(sideEdgeTilt * 1000) / 1000)
+        .isEqualTo(Math.round(Math.toDegrees(Math.acos(Math.sqrt(0.5) / Math.sqrt(1.5))) * 1000) / 1000);
+  }
+
+  @Test
+  void pyramidWithSideLengthTwoHeightOne_getSideEdgeTilt_isCorrect() {
+    Pyramid pyramid = new Pyramid(2, 1);
+
+    double sideEdgeTilt = pyramid.getSideEdgeTilt();
+
+    assertThat(Math.round(sideEdgeTilt * 1000) / 1000)
+        .isEqualTo(Math.round(Math.toDegrees(Math.acos(Math.sqrt(2) / Math.sqrt(3))) * 1000) / 1000);
+  }
 }

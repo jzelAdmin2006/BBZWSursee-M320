@@ -51,4 +51,9 @@ public class Pyramid {
     RightTriangle lateralSlopeTriangle = new RightTriangle(sideLength / 2, height);
     return lateralSlopeTriangle.getAlpha();
   }
+
+  public double getSideEdgeTilt() {
+    RightTriangle sideEdgeHypotenuseTriangle = new RightTriangle(getBase().getDiagonal() / 2, height);
+    return sideEdgeHypotenuseTriangle.getAlpha();
+  }
 }
