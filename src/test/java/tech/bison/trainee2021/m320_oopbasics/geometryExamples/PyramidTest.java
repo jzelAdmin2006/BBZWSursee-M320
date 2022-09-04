@@ -95,7 +95,7 @@ public class PyramidTest {
 
     double sideEdge = pyramid.getSideEdge();
 
-    assertThat(sideEdge).isEqualTo(Math.sqrt(1.5));
+    assertThat(Math.round(sideEdge * 1000) / 1000).isEqualTo(Math.round(Math.sqrt(1.5) * 1000) / 1000);
   }
 
   @Test
@@ -149,7 +149,7 @@ public class PyramidTest {
 
     double totalEdgeLength = pyramid.getTotalEdgeLength();
 
-    assertThat(totalEdgeLength).isEqualTo(4 + 4 * Math.sqrt(1.5));
+    assertThat(Math.round(totalEdgeLength * 1000) / 1000).isEqualTo(Math.round((4 + 4 * Math.sqrt(1.5)) * 1000) / 1000);
   }
 
   @Test
