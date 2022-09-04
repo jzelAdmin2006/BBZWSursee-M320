@@ -23,7 +23,7 @@ public class Pyramid {
   }
 
   public IsoscelesTriangle getSideTriangle() {
-    double height = new RightTriangle(sideLength, sideLength / 2).getHypotenuse();
+    double height = new RightTriangle(this.height, sideLength / 2).getHypotenuse();
     return new IsoscelesTriangle(sideLength, height);
   }
 

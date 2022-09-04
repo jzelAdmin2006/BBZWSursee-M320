@@ -80,6 +80,16 @@ public class PyramidTest {
   }
 
   @Test
+  void pyramidWithSideLengthThreeHeightTwo_getSideTriangle_baseAndHeightAreCorrect() {
+    Pyramid pyramid = new Pyramid(3, 2);
+
+    IsoscelesTriangle sideTriangle = pyramid.getSideTriangle();
+
+    assertThat(sideTriangle.getBase()).isEqualTo(3);
+    assertThat(sideTriangle.getHeight()).isEqualTo(2.5);
+  }
+
+  @Test
   void pyramidWithSideLengthHeightOne_getSideEdge_isSquareRootOfOnePointFive() {
     Pyramid pyramid = new Pyramid(1, 1);
 
