@@ -168,4 +168,22 @@ public class PyramidTest {
 
     assertThat(lateralArea).isEqualTo(Math.sqrt(5) * 4);
   }
+
+  @Test
+  void pyramidWithSideLengthHeightOne_getLateralSlope_isCorrect() {
+    Pyramid pyramid = new Pyramid(1, 1);
+
+    double lateralSlope = pyramid.getLateralSlope();
+
+    assertThat(lateralSlope).isEqualTo(Math.toDegrees(Math.asin(1 / Math.sqrt(1.25))));
+  }
+
+  @Test
+  void pyramidWithSideLengthTwoHeightOne_getLateralSlope_isFourtyFive() {
+    Pyramid pyramid = new Pyramid(2, 1);
+
+    double lateralSlope = pyramid.getLateralSlope();
+
+    assertThat(Math.round(lateralSlope)).isEqualTo(45);
+  }
 }

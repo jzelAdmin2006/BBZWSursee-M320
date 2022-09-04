@@ -48,4 +48,9 @@ public class Pyramid {
   public double getTotalEdgeLength() {
     return getBase().getScope() + getSideEdge() * 4;
   }
+
+  public double getLateralSlope() {
+    RightTriangle lateralSlopeTriangle = new RightTriangle(sideLength / 2, height);
+    return lateralSlopeTriangle.getAlpha();
+  }
 }
