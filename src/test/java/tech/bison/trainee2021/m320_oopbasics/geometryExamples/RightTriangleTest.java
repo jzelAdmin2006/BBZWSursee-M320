@@ -76,4 +76,40 @@ public class RightTriangleTest {
 
     assertThat(area).isEqualTo(2);
   }
+
+  @Test
+  void newRightTriangleWithAdjacentOppositeSideOne_getAlpha_isFourtyFive() {
+    RightTriangle rightTriangle = new RightTriangle(1, 1);
+
+    double alpha = rightTriangle.getAlpha();
+
+    assertThat(Math.round(alpha)).isEqualTo(45);
+  }
+
+  @Test
+  void newRightTriangleWithAdjacentTwoOppositeSideOne_getAlpha_isCorrect() {
+    RightTriangle rightTriangle = new RightTriangle(2, 1);
+
+    double alpha = rightTriangle.getAlpha();
+
+    assertThat(alpha).isEqualTo(Math.toDegrees(Math.asin(1 / (Math.sqrt(5)))));
+  }
+
+  @Test
+  void newRightTriangleWithAdjacentOppositeSideOne_getBeta_isFourtyFive() {
+    RightTriangle rightTriangle = new RightTriangle(1, 1);
+
+    double beta = rightTriangle.getBeta();
+
+    assertThat(Math.round(beta)).isEqualTo(45);
+  }
+
+  @Test
+  void newRightTriangleWithAdjacentTwoOppositeSideOne_getBeta_isCorrect() {
+    RightTriangle rightTriangle = new RightTriangle(2, 1);
+
+    double beta = rightTriangle.getBeta();
+
+    assertThat(beta).isEqualTo(Math.toDegrees(Math.asin(2 / (Math.sqrt(5)))));
+  }
 }

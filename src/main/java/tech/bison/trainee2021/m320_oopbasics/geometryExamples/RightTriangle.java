@@ -2,6 +2,7 @@ package tech.bison.trainee2021.m320_oopbasics.geometryExamples;
 
 public class RightTriangle {
 
+  private static final int RIGHT_TRIANGLE_GAMMA = 90;
   private double adjacent;
   private double oppositeSide;
 
@@ -24,5 +25,13 @@ public class RightTriangle {
 
   public double getArea() {
     return adjacent * oppositeSide / 2;
+  }
+
+  public double getAlpha() {
+    return Math.toDegrees(Math.asin(getOppositeSide() / getHypotenuse()));
+  }
+
+  public double getBeta() {
+    return RIGHT_TRIANGLE_GAMMA - getAlpha();
   }
 }
