@@ -37,8 +37,12 @@ public class Pyramid {
     return getBase().getArea() * height / 3;
   }
 
+  public double getLateralArea() {
+    return getSideTriangle().getArea() * 4;
+  }
+
   public double getSurfaceArea() {
-    return getSideTriangle().getArea() * 4 + getBase().getArea();
+    return getLateralArea() + getBase().getArea();
   }
 
   public double getTotalEdgeLength() {

@@ -150,4 +150,22 @@ public class PyramidTest {
 
     assertThat(totalEdgeLength).isEqualTo(4 + 4 * Math.sqrt(4.5));
   }
+
+  @Test
+  void pyramidWithSideLengthHeightOne_getLateralArea_isCorrect() {
+    Pyramid pyramid = new Pyramid(1, 1);
+
+    double lateralArea = pyramid.getLateralArea();
+
+    assertThat(lateralArea).isEqualTo(Math.sqrt(1.25) * 2);
+  }
+
+  @Test
+  void pyramidWithSideLengthHeightTwo_getLateralArea_isCorrect() {
+    Pyramid pyramid = new Pyramid(2, 2);
+
+    double lateralArea = pyramid.getLateralArea();
+
+    assertThat(lateralArea).isEqualTo(Math.sqrt(5) * 4);
+  }
 }
