@@ -1,7 +1,6 @@
 package tech.bison.trainee2021.m320_oopbasics.peoplePolymorphismExample_cdd;
 
-public class Person {
-  private static String message = "Guten Tag";
+public abstract class Person {
   private final int id;
   private String firstName;
   private String lastName;
@@ -32,7 +31,5 @@ public class Person {
     this.lastName = lastName;
   }
 
-  public String getMessage() {
-    return firstName + " " + lastName + " sagt: " + message;
-  }
+  public abstract String getMessage();
 }
