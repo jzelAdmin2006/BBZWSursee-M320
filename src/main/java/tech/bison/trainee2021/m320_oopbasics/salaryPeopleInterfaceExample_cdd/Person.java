@@ -2,7 +2,7 @@ package tech.bison.trainee2021.m320_oopbasics.salaryPeopleInterfaceExample_cdd;
 
 import java.lang.reflect.Field;
 
-public class Person {
+public abstract class Person {
   private String lastName;
 
   public Person(String lastName, String firstName) {
