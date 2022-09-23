@@ -1,6 +1,6 @@
 package tech.bison.trainee2021.m320_oopbasics.salaryPeopleInterfaceExample_cdd;
 
-public class Politician extends PartyMember {
+public class Politician extends PartyMember implements WorthWhilePerson {
 
   private double salary;
   private String council;

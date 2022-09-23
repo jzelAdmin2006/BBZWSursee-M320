@@ -1,6 +1,6 @@
 package tech.bison.trainee2021.m320_oopbasics.salaryPeopleInterfaceExample_cdd;
 
-public class Employee extends Person {
+public class Employee extends Person implements WorthWhilePerson {
 
   private double salary;
   private String company;
