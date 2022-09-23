@@ -1,6 +1,6 @@
 package tech.bison.trainee2021.m320_oopbasics.salaryPeopleInterfaceExample_cdd;
 
-public class PartyMember extends Person {
+public abstract class PartyMember extends Person {
 
   private String party;
 
