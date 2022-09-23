@@ -1,7 +1,5 @@
 package tech.bison.trainee2021.m320_oopbasics.salaryPeopleInterfaceExample_cdd;
 
-import java.lang.reflect.Field;
-
 public abstract class Person {
   private String lastName;
 
@@ -28,7 +26,4 @@ public abstract class Person {
     this.firstName = firstName;
   }
 
-  public Field[] outputData() {
-    return Person.class.getDeclaredFields();
-  }
 }
