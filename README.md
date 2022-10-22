@@ -1,3 +1,1 @@
-# Java Grundausbildung
-
-Java Grundausbildung, Klasse 2021
+# BBZW Sursee
